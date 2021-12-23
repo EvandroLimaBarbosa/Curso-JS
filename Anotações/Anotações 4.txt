@@ -1,0 +1,33 @@
+Eventos div
+
+mouseenter
+mousemove
+mousedown
+mouseup
+click
+mouseout
+
+Função é um conjunto de linhas que são executadas apenas quando ocorre o evento
+ex:
+
+function nome_da_função(parametro){
+
+}
+
+
+para adicionar um evento dentro do script coloque
+
+add.EventListener('nome do evento', nome da função)
+
+
+input:number faz uma caixa para selecionar um numero no body html
+
+<input type="number" name="txtn1" id="txtn1"> 
+
+algoritimo para fazer uma caixa de numero
+
+<input type="button" value="Somar" onclick="somar()">
+algoritimo para fazer uma caixa de botão
+
+***VARIAVEL***.innerHTML = `A Soma entre ${n1} e ${n2} é de <strong>${s}</strong>`
+

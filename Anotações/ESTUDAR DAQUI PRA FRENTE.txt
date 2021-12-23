@@ -1,0 +1,42 @@
+HTML E CSS
+
+
+FUNCTIONS
+
+OBJETOS // <-- lá embaixo kk
+
+CLASSES
+
+MODULARIZAÇÃO
+
+RegEx
+
+JSON
+
+AJAX
+
+NodeJS
+
+
+
+
+OBJETOS
+
+revisando o que já aprendemos sobre array (variaveis compostas)
+let num = [5,8,4]
+
+no caso num recebe esses 3 valores que são identificados por num[0], num[1] e num[2]... apenas por numeros, sendo iniciado por 0
+
+agora no objeto é diferente...
+
+ex:
+
+let amigo = {nome'José', peso:85.4, sexo:'M',engordar(p){} }
+
+assim ela cria uma variavel composta podendo guardar valores, sendo textos e numeros, e também pode guardar funções...
+
+ali em cima no caso ele guardou a função "engordar(p)"... doideira né kkk
+
+e esclarecendo, quando digitamos no NODEJS console.log(typeof NOME DA VARIAVEL AQUI)
+
+sendo array ou objeto ele retorna o resultado de "object"... pois os dois são estruturas da mesma origem e mesma classe

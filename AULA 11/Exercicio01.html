@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALFANDEGA</title>
+</head>
+<body>
+      <style>
+          body {
+                background-color: rgb(206, 255, 247);
+
+          }
+      </style>
+    <h1>Vivendo em um País</h1>
+    Qual País Você Mora ??
+      <input type="text" placeholder ="Digite Seu País" name="txtpais" id="txtpais">
+      <input type="button" value="Verificar" onclick="passaporte()">
+      <div id = "res"><p>Resultado</p></div>
+    <script>
+        function passaporte() {
+            var pais = window.document.getElementById('txtpais').value.toUpperCase()
+            var res = window.document.querySelector('div#res')
+
+             if (pais == 'BRASIL') {
+                res.innerHTML = `<p>HUEHUE BR BR</p>`
+             }
+                else if (pais == 'BRAZIL') {
+                  res.innerHTML = `<p><strong>"BRASIL"</strong> SE ESCREVE COM <Strong>"S"</Strong> SEU FILHO DA PUTA</p>`
+                }
+                  else {
+                     res.innerHTML = `<p>Sai Fora Gringo Pau No Cu</p>`
+                   }
+                
+             }
+
+
+    </script>
+
+</body>
+</html>

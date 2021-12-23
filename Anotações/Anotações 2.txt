@@ -1,0 +1,66 @@
+Operadores Relacionais
+> Maior
+< Menor
+>= Maior ou Igual
+<= Menor ou Igual
+== Igual
+!= Diferente
+=== Valores Identicos
+!== Não Identicos
+
+-------------------------
+
+Identidade 
+5 == 5   --> true
+5 == '5' --> true //mesmo sendo tipos Diferentes são iguais
+5 ==='5' --> false //são tipos diferentes
+5 === 5 --> true //são identicos em tudo
+
+Logicos
+
+! Negação // Não
+&& Conjunção  // E
+|| Disjunção  // Ou
+
+Negação !
+    ! true  --> false
+    ! false --> true
+
+Conjunção && 
+    true && true   --> true
+    true && false  --> false
+    false && true  --> false
+    false && false --> false
+
+Disjunção ||
+    true || true   --> true
+    true || false  --> true
+    false || true  --> true
+    false || false --> false
+
+Exemplos
+
+idade >= 15 && idade <= 17 //a idade está entre 15 e 17 ?
+
+estado == 'RJ' || estado == 'SP' //o estado é RJ ou SP?
+
+salario > 1500 && sexo != 'M' // o salário é acima de 1500 e não é homem
+
+Ordem de precedência
+
+()
+**
+* / %
++ - 
+> < >= <= == != === !==
+!
+&&
+||
+
+
+OPERADOR TERNÁRIO
+? :
+
+Ex:
+Teste ? true : false
+média >= 7.0 ? "Aprovado" : "Reprovado"

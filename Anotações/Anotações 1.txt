@@ -1,0 +1,54 @@
+n1.toFixed(2)
+coloca 2 casas depois da virgula (ou ponto)
+
+n1.toFixed(2).replace('.',',')
+Para subistituir o ponto por virgula
+
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'))
+Coloca o numero com 'R$' na frente
+
+BRL É MOEDA BRASILEIRA R$
+EUR É MOEDA DA EUROPA € (EURO)
+USD É A MOEDA DOS EUA (DOLAR)
+
+para transformar em numero coloque Number()
+
++   ->  Adição
+-   ->  Subtração	
+*   ->  Multiplicação
+/   ->  Divisão
+%   ->  Resto da divisão
+**  ->  Potencia
+
+ORDEM DE PRECEDÊNCIA DOS OPERADORES ARITIMETICOS
+
+conta da esquerda para a direita
+()
+**
+* / %
++ - 
+
+Man, tem como simplificar uma auto atribuição
+tipo
+
+SIMPLIFICAR 
+
+var n = 3 // ainda estou fazendo a variavelfl, calma
+n = n + 4 // essa sim da pra simplificar... se liga
+
+n += 4   // e assim você tem o mesmo resultado
+
+n *= 2 // tem como fazer com todos simbolos
+
+INCREMENTO
+
+var x = 5
+x = x + 1
+x = x - 1
+
+ //mas tem como fazer isso de uma forma mais fácil... se liga
+x ++  // é a mesma coisa
+x --  // ele adiciona 1 a variavel
+ou tem como adicionar antes
+--x
+++x // doideira man

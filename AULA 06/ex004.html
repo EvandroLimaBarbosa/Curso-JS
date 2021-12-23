@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        body {
+            font: normal 20pt Arial;
+
+        }
+    </Style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é seu Nome ?')
+        var dinheiro = window.prompt('Digite um salário qualquer')
+        var moeda = window.prompt('Qual é a Moeda ?')
+        var n1 = 1520.5
+        document.write(`Olá, <strong>${nome}</strong>! Seu Nome Tem ${nome.length} Letras.<br/>`)
+        document.write(`Seu nome em MAIÚSCULAS é ${nome.toUpperCase()}<br/>`)
+        document.write(`Seu nome em minusculas é ${nome.toLowerCase()}<br/>`)
+        document.write(`Você vai ganhar um salário de ${Number(dinheiro).toLocaleString('pt-BR', {style: 'currency', currency: moeda})} Por mês!`)
+    </script>
+</body>
+</html>

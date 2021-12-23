@@ -1,0 +1,50 @@
+REPETIÇÕES!!
+
+LAÇOS OU INTERAÇÕES
+
+ESTRUTURA DE CONTROLE SEQUENCIAIS
+
+AO INVÉS DE FAZER ISSO 
+
+function comerPizza() {
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+}
+
+FAÇA ISSO !!
+
+function comerPizza() {
+   while(temFatia()) {
+    comerFatia()
+   }
+}
+
+SIMPLES!!
+
+ooou
+
+do{
+   comerFatia()
+}   while()
+
+
+
+ooou pode usar a função "FOR"
+
+
+for (inicio; teste ; incremento){
+     
+}
+
+Sendo assim:
+
+for (var c=1;c<=10;c++){
+    comerFatia()
+}

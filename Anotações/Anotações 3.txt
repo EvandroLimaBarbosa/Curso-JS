@@ -1,0 +1,56 @@
+DOM significa Modelo de Objeto de Documento
+Document
+Object
+Model
+
+arvore dom é a sequencia de elementos
+ARVORE DOM É ASSIM:
+window
+        location
+        document
+        |       html
+        |      |     head
+        |      |     |       meta
+        |      |     |       title	
+        |      |     body
+        |      |     |         h1
+        |      |     |         p
+        |      |     |         p
+        |      |     |         |     stong	
+        |      |     |         div	
+        history
+
+quem está acima é parent ("Pai") quem está embaixo é child ("Filho")
+
+PARA ESCREVER ALGUMA COISA USE
+window.document.write('ALGUMA COISA)
+
+Tipos para pesquisar DOM no js
+
+Marca
+getElementsByTagName()[]
+
+Id
+getElementById()
+
+Nome
+getElementsByName()[]
+
+Classe
+getElementsByClass()[]
+
+Seletor
+querySelector('div.msg')
+
+
+// Se estiver escrito "Elements" com "s" No plural, significa que tem mais de um elemento
+
+para colocar nome para algum algoritimo coloque na frente do      <div    ou       <p         coloca  id=['o nome que você quiser'] ou name ou class
+
+
+quando for id é representado por #
+quando for class é representado por .
+
+
+para usar o Seletor coloque a sintaxe do css tipo ('div#msg')
+

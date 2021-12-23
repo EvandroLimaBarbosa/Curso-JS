@@ -1,0 +1,35 @@
+FUNÇÕES
+
+São ações executadas assim que são CHAMADAS ou em decorrência de algum evento
+
+Uma função pode receber PARÂMETROS e retornar um RESULTADO
+
+exemplo
+
+function ação(parâmetro){
+	return res
+}
+
+ação(5)
+
+
+
+
+outro exemplo de função funcional
+
+function ParOuImpar(n) {
+	if (n%2==0) {
+ 	   return 'par'
+	} else {
+	   return 'impar'
+	}
+}
+
+let res = parouimpar(11)
+
+
+
+SE CASO NOS PARAMETROS NÃO FOR COLOCADO DÁ PRA DEIXAR VALORES PRÉ DEFINIDOS
+EX:
+
+function soma(n1=0, n2=0)

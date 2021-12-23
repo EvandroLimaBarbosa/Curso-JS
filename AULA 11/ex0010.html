@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <style>
+        body {
+            background: rgb(70, 144, 255);
+            font: normal 20pt Arial;
+            text-align: center;
+    }
+        input {
+            margin-top: 10px;
+            margin-left: 80px;
+            font: normal 18pt Arial;
+            width: 100px;
+            text-align: center;
+        }
+        input#txtvel {
+            margin-left: 1px;
+            font: normal 18pt Arial;
+            width: 100px;
+            text-align: center;
+            
+        }
+        div#res {
+            margin-top: 20px;
+            font: normal 30pt Calibri;
+            text-align: center;
+        }
+        h1 {
+            font: bold 30pt arial;
+            text-align: center;
+        }
+        h2 {
+            font: bold 20pt arial;
+            background: rgb(229, 255, 0);
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.473);
+        }
+    </style>
+    <h1>Sistema de Multas</h1>
+    <h2>LIMITE DA VIA 60Km/h</h2>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <br>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">Resultado</div>
+    <script>
+      function calcular() {
+         var txtvel = window.document.getElementById('txtvel')
+         var res = window.document.querySelector('div#res')
+         var vel = Number(txtvel.value) 
+         res.innerHTML = `<p>Sua velocidade é <strong>${vel}Km/h</strong></p>`
+            if (vel > 100) {
+                res.innerHTML += `<p>Você ultrapassou o limite de velocidade. <strong>MULTADO!</strong></p>`
+            }
+            else {
+                res.innerHTML = `Ta de boa pode continuar sua viagem`
+            }
+            res.innerHTML += `<p>Dirija Sempre Com Cinto de Segurança!</p>`
+        }
+
+    </script>
+
+</body>
+</html>
