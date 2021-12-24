@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div>
+            <div id="res">
+                Preencha os dados acima para ver o resultado!
+            </div>
+            </select>
+            <br>
+                <input type="button" value="C" id="clear" onclick="fclear()">
+                <input type="button" value="<" id="backspace" onclick="fbackspace()">
+                <input type="button" value="%" id="porcentagem" onclick="fporcentagem()">
+                <input type="button" value="÷" id="dividir" onclick="fdividir()">
+                <br>
+                <input type="button" value="7" id="7" onclick="f7()">
+                <input type="button" value="8" id="8" onclick="f8()">
+                <input type="button" value="9" id="9">
+                <input type="button" value="x" id="multiplicar">
+                <br>
+                <input type="button" value="4" id="4">
+                <input type="button" value="5" id="5">
+                <input type="button" value="6" id="6">
+                <input type="button" value="-" id="menos">
+                <br>
+                <input type="button" value="1" id="1">
+                <input type="button" value="2" id="2">
+                <input type="button" value="3" id="3">
+                <input type="button" value="+" id="mais">
+                <br>
+                <input type="button" value="0" id="0">
+                <input type="button" value="00" id="00">
+                <input type="button" value="," id="virgula">
+                <input type="button" value="=" id="=" onclick="figual()">                
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; Evandro Lima</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
