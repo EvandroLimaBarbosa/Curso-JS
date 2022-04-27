@@ -1,3 +1,3 @@
 # Curso-de-Java-Script
 ---
-# Primeiros passos usando JS
+Primeiros passos usando JS
