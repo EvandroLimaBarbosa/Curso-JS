@@ -1,5 +1,5 @@
 body { 
-    background: rgb(74, 82, 128);
+    background: rgb(59, 59, 59);
     font: normal 15pt Arial;
 }
 
@@ -16,11 +16,8 @@ section {
     padding: 15px;
     width: 500px;
     margin: auto;
+    text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.473);
-}
-
-select#flista {
-    width: 150px;
 }
 
 footer {
