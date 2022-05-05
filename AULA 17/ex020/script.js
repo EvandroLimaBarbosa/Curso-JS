@@ -16,13 +16,13 @@
         sel.innerHTML =  ''
         while(c <= 100){
             if (num == 10){
-            let item = document.createElement('option')
+            let item = document.createElement('option');
             item.push(n[c])
             item.text = `Valor ${n} adicionado.`
             sel.appendChild(item)
-            } else {
+            /*} else {
                 window.alert('verau')
-            }
+            }*/}
             
     }
  }
