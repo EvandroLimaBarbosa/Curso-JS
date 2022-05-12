@@ -78,6 +78,10 @@ function n0 (){
     res.innerText += '0'
 }
 
+function nponto (){
+    res.innerText += '.'
+}
+
 function somar() {
     simbolo = '+'
     calcular(simbolo)
