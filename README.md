@@ -13,3 +13,4 @@ https://evandrolimabarbosa.github.io/Curso-JS/AULA%2017/Exercicio%20resolvido/Mo
 
 calculadora
 https://evandrolimabarbosa.github.io/Curso-JS/Tentativa%20de%20calculadora/calculadora/index.html
+https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/index.html
