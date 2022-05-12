@@ -124,3 +124,8 @@ function igual(){
     
     textocalculo.innerText += ` = ${res.innerText}`
 }
+
+
+function porcentagem() {
+    window.alert('Erro!, Essa função ainda não está pronta.')
+}
