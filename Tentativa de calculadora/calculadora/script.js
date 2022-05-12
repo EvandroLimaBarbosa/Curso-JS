@@ -126,6 +126,6 @@ function igual(){
 }
 
 
-function porcentagem() {
+function porcento() {
     window.alert('Erro!, Essa função ainda não está pronta.')
 }
