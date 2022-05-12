@@ -1,8 +1,8 @@
 let res = document.getElementById('res');
 var textocalculo = document.getElementById('calculo');
-var simbolo
+var simbolo 
 var primeiroresultado
-var segundoresultado
+var segundoresultado = ''
 
 function calcular(simbolo){
     primeiroresultado = res.innerText
@@ -110,6 +110,10 @@ function apagar() {
   }
 
 function igual(){
+  if(res.innerText == '0') {
+        window.alert('Digite algum numero para continuar')
+  }else {
+
     segundoresultado = res.innerText
     textocalculo.innerText += ` ${res.innerText}`;
 
@@ -127,6 +131,7 @@ function igual(){
 
     
     textocalculo.innerText += ` = ${res.innerText}`
+  }
 }
 
 
