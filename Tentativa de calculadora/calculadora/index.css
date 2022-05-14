@@ -47,6 +47,9 @@ body {
 
     box-shadow: 1px 1px 10px rgba(93, 93, 93, 0.489);
     border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
 }
 
 .container > div:nth-child(n + 3):hover {
@@ -84,6 +87,12 @@ body {
     word-break: break-word;
 }
 
+.container_item_igual {
+    grid-row: 6/8;
+    grid-column: 4;
+}
+
+ 
 .container_item_limpar {
     grid-row: 3;
     grid-column: 1
@@ -100,40 +109,35 @@ body {
 }
 
 .container_item_somar {
-    grid-row: 6;
-    grid-column: 4;
-}
-
-.container_item_subtrair {
     grid-row: 5;
     grid-column: 4;
 }
 
-.container_item_multiplicar {
+.container_item_subtrair {
     grid-row: 4;
+    grid-column: 4;
+}
+
+.container_item_multiplicar {
+    grid-row: 3;
     grid-column: 4;
 }
 
 .container_item_dividir {
     grid-row: 3;
-    grid-column: 4;
+    grid-column: 3;
 }
 
-.container_item_igual {
-    grid-row: 7;
-    grid-column: 3 / 5;
-    font-size: 60px;
-    font-style: normal;
-}
+
 
 .container_numeros_ponto {
     grid-row: 7;
-    grid-column: 2;
+    grid-column: 3;
 }
 
 .container_numeros_0 {
     grid-row: 7;
-    grid-column: 1;
+    grid-column: 1/3;
 }
 
 .container_numeros_1 {

@@ -16,8 +16,11 @@ function limpar (){
     textocalculo.innerText = ''
 }
 
-function apagar (){
+function otimizada(){
+    var contador = 0 
+    while (contador => 9){
 
+    }
 }
 
 function sezero (){
