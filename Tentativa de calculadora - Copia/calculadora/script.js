@@ -1,10 +1,15 @@
 var resultado = document.getElementById('container_resultado');
 var calculo = document.getElementById('container_calculo');
 var trava = 0
+var reset = 0
 
 function insert(num) {
-    if (calculo.innerText != ' '){
-        console.log(trava)
+    if(reset == 1) {
+        resultado.innerText = num;
+        calculo.innerText = ' '
+        reset = 0
+    }else if (calculo.innerText != ' '){
+                console.log(trava)
             if (trava == 0){
                 resultado.innerText = num;
                 trava = 1;
@@ -21,8 +26,13 @@ function insert(num) {
 }
 
 function insertsimbolo(num) {
-    calculo.innerText += ` ${resultado.innerText} ${num}`;
-    trava = 0
+    if(reset == 1) {
+        calculo.innerText = `${resultado.innerText} ${num}`;
+        reset = 0;
+    }else{
+        calculo.innerText += ` ${resultado.innerText} ${num}`;
+        trava = 0;
+    }
 }
 
 function limpar() {
@@ -41,8 +51,10 @@ function apagar() {
 function calcular(){
     calculo.innerText += ` ${resultado.innerText}`;
     var valorfinal = calculo.innerText;
-    console.log(valorfinal)
     resultado.innerHTML = eval(valorfinal);
+    console.log(valorfinal);
 
-    calculo.innerText += ` = ${eval(valorfinal)}`;
+    calculo.innerText += ` =`;
+
+    reset = 1
 }
