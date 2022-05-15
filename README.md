@@ -2,15 +2,17 @@
 ---
 Portifólio
 
-verificador de idade
+## verificador de idade
 https://evandrolimabarbosa.github.io/Curso-JS/AULA%2012%20EX/ex015/Modelo.html
 
-tabuadas
+## tabuadas
 https://evandrolimabarbosa.github.io/Curso-JS/AULA%2014%20EX/ex019/Modelo.html
 
-analisador de numero
+## analisador de numero
 https://evandrolimabarbosa.github.io/Curso-JS/AULA%2017/Exercicio%20resolvido/Modelo.html
 
-calculadora
+## calculadora
 https://evandrolimabarbosa.github.io/Curso-JS/Tentativa%20de%20calculadora/calculadora/index.html
-https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/index.html
+html : https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/index.html
+script : https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/script.js
+css : https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/index.css
