@@ -1,7 +1,5 @@
-# Curso-de-Java-Script
+# Portifólio Curso-de-Java-Script
 ---
-Portifólio
-
 ## Verificador de idade
 [Acessar](https://evandrolimabarbosa.github.io/Curso-JS/AULA%2012%20EX/ex015/Modelo.html)
 
