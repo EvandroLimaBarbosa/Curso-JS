@@ -14,8 +14,8 @@ Portifólio
 ## calculadora
 [Calculadora](https://evandrolimabarbosa.github.io/Curso-JS/Tentativa%20de%20calculadora/calculadora/index.html)
 
-[HTML](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/index.html)
+- [HTML](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/index.html)
 
-[Script](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/script.js)
+- [Script](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/script.js)
 
-[CSS](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/index.css)
+- [CSS](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/index.css)
