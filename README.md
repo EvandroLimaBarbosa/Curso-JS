@@ -10,7 +10,7 @@
 [Acessar](https://evandrolimabarbosa.github.io/Curso-JS/AULA%2017/Exercicio%20resolvido/Modelo.html)
 
 ## Calculadora
-[Calculadora](https://evandrolimabarbosa.github.io/Curso-JS/Tentativa%20de%20calculadora/calculadora/index.html)
+[Acessar Calculadora](https://evandrolimabarbosa.github.io/Curso-JS/Tentativa%20de%20calculadora/calculadora/index.html)
 
 - [HTML](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora/calculadora/index.html)
 
