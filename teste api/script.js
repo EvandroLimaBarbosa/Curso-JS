@@ -24,9 +24,12 @@ fetch(url)
     span.innerHTML = `${author.name}`;
 
     let txtdata = `${author.createdAt.substring(0,10)}`;
+    let dia = `${author.createdAt.substring(8,10)}`;
+    let mes = `${author.createdAt.substring(5,7)}`;
+    let ano = `${author.createdAt.substring(0,4)}`;
     let hora = `${author.createdAt.substring(11,16)}`;
 
-    data.innerHTML = ` ${txtdata} | ${hora}hrs`
+    data.innerHTML = ` ${dia}/${mes}/${ano} | ${hora}hrs`
 
 
 
