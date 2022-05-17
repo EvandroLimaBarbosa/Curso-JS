@@ -16,22 +16,24 @@ fetch(url)
     
   let authors = data;
   return authors.map(function(author) {
-      console.log(author)
     let li = createNode('li');
     let img = createNode('img');
     let span = createNode('p');
     let data = createNode('p');
     img.src = author.avatar;
     span.innerHTML = `${author.name}`;
-    data.innerHTML = ` ${author.createdAt}`
 
-    let txtdata = `${author.createdAt}`;
+    let txtdata = `${author.createdAt.substring(0,10)}`;
+    let hora = `${author.createdAt.substring(11,16)}`;
+
+    data.innerHTML = ` ${txtdata} | ${hora}hrs`
+
+
 
     append(li, img);
     append(li, span);
     append(li, data);
     append(ul, li);
-    console.log(authors)
   })
 })
 .catch(function(error) {
