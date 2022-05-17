@@ -17,3 +17,6 @@
 - [Script](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora%20-%20Copia/calculadora/script.js)
 
 - [CSS](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Tentativa%20de%20calculadora%20-%20Copia/calculadora/index.css)
+
+## Aprendendo Api
+- [Acessar](https://evandrolimabarbosa.github.io/Curso-JS/teste%20api/index.html)
