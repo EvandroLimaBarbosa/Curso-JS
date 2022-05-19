@@ -22,13 +22,11 @@ fetch(url)
     img.src = author.avatar;
     span.innerHTML = `${author.name}`;
 
-    let txtdata = `${author.createdAt.substring(0,10)}`;
-    let dia = `${author.createdAt.substring(8,10)}`;
-    let mes = `${author.createdAt.substring(5,7)}`;
-    let ano = `${author.createdAt.substring(0,4)}`;
-    let hora = `${author.createdAt.substring(11,16)}`;
+    let txtdata = `${author.createdAt.substring(0,19)}`;
 
-    data.innerHTML = ` ${dia}/${mes}/${ano} | ${hora}hrs`
+    let formatohora =  moment(txtdata, 'YYYY-MM-DD HH:mm:ss').format('DD/MM/YYYY HH:mm:ss');
+
+    data.innerHTML = ` ${formatohora}`
 
     append(li, img);
     append(li, span);
