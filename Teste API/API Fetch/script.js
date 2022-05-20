@@ -1,3 +1,8 @@
+function reset() {
+  var btn = document.querySelector("#botao");
+  btn.addEventListener("click",location.reload());
+}
+
 
 function createNode(element) {
     return document.createElement(element);
@@ -10,8 +15,8 @@ const ul = document.getElementById('users');
 const url = 'https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario';
 
 
-
-axios.post('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=12', {
+function adicionar(){
+axios.post('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=10', {
   name: 'Lisa Simpson',
   createdAt: new Date(),
   avatar: 'https://i.pinimg.com/originals/53/75/de/5375de5c953614c19b4fd6bebf0f5801.jpg'
@@ -23,6 +28,19 @@ axios.post('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=12'
   console.error(error);
 });
 
+reset()
+
+}
+
+axios.get('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=10')
+  .then(function (response) {
+    // manipula o sucesso da requisição
+    console.log(response);
+  })
+  .catch(function (error) {
+    // manipula erros da requisição
+    console.error(error);
+  });
 
 
 
@@ -55,13 +73,5 @@ fetch(url)
   console.log(error);
 });
 
-axios.get('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=13')
-  .then(function (response) {
-    // manipula o sucesso da requisição
-    console.log(response);
-  })
-  .catch(function (error) {
-    // manipula erros da requisição
-    console.error(error);
-  });
+
 
