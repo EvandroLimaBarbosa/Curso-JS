@@ -9,6 +9,23 @@ function append(parent, el) {
 const ul = document.getElementById('users');
 const url = 'https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario';
 
+
+
+axios.post('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=12', {
+  name: 'Lisa Simpson',
+  createdAt: new Date(),
+  avatar: 'https://i.pinimg.com/originals/53/75/de/5375de5c953614c19b4fd6bebf0f5801.jpg'
+})
+.then(function (response) {
+  console.log(response);
+})
+.catch(function (error) {
+  console.error(error);
+});
+
+
+
+
 fetch(url)
 .then((resp) => resp.json())
 .then(function(data) {
@@ -37,3 +54,14 @@ fetch(url)
 .catch(function(error) {
   console.log(error);
 });
+
+axios.get('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=13')
+  .then(function (response) {
+    // manipula o sucesso da requisição
+    console.log(response);
+  })
+  .catch(function (error) {
+    // manipula erros da requisição
+    console.error(error);
+  });
+
