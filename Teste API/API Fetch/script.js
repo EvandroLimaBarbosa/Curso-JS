@@ -16,7 +16,7 @@ const url = 'https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario';
 
 
 function adicionar(){
-axios.post('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=10', {
+axios.post('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=41', {
   name: 'Lisa Simpson',
   createdAt: new Date(),
   avatar: 'https://i.pinimg.com/originals/53/75/de/5375de5c953614c19b4fd6bebf0f5801.jpg'
@@ -28,10 +28,11 @@ axios.post('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=10'
   console.error(error);
 });
 
-reset()
 
+//  document.location.reload(true);
 }
 
+function fget(){
 axios.get('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=10')
   .then(function (response) {
     // manipula o sucesso da requisição
@@ -41,8 +42,7 @@ axios.get('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=10')
     // manipula erros da requisição
     console.error(error);
   });
-
-
+}
 
 fetch(url)
 .then((resp) => resp.json())
@@ -72,6 +72,3 @@ fetch(url)
 .catch(function(error) {
   console.log(error);
 });
-
-
-
