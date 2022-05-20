@@ -26,6 +26,7 @@ axios.post('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=41'
   document.location.reload(true);
 })
 .catch(function (error) {
+  window.alert('Deu ruim!!!');
   console.error(error);
 });
 
