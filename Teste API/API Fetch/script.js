@@ -23,13 +23,12 @@ axios.post('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/usuario?ID=41'
 })
 .then(function (response) {
   console.log(response);
+  document.location.reload(true);
 })
 .catch(function (error) {
   console.error(error);
 });
 
-
-//  document.location.reload(true);
 }
 
 function fget(){
