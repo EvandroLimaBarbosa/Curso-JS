@@ -34,6 +34,7 @@ body {
 	background-color: var(--cor0);
 	padding: 30px;
 	border-radius: 5%;
+    width: 400px;
 	
 }
 
@@ -84,6 +85,7 @@ h1 {
 	text-shadow: 2px 2px 2px black;
 }
 
+
 button {
 	border: 2;
 	background-color: transparent;
@@ -104,29 +106,6 @@ button:hover {
 .justify-center {
 	display: flex;
 	justify-content: center;
-}
-
-hr {
-	margin-top: 5%;
-	margin-bottom: 5%;
-	width: 60%;
-}
-
-p {
-	font-size: 14pt;
-	text-align: center;
-}
-
-a {
-	color: var(--cor1);
-	font-weight: bold;
-	text-decoration: none;
-	transition: all .3s ease-out;
-	text-shadow: 1px 1px 1px black;
-}
-
-a:hover {
-	color: var(--cor2);
 }
 
 .fa-eye {
