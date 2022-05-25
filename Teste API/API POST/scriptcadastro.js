@@ -1,4 +1,4 @@
-let btn = document.querySelector('.fa-eye');
+let btn = document.querySelector('#verSenha');
 
 btn.addEventListener('click', ()=>{
     let inputSenha = document.querySelector('#senha')
@@ -6,6 +6,18 @@ btn.addEventListener('click', ()=>{
         inputSenha.setAttribute('type', 'text')
     }else{
         inputSenha.setAttribute('type', 'password')
+    }
+
+})
+
+let btnconfirm = document.querySelector('#verConfirmSenha');
+
+btnconfirm.addEventListener('click', ()=>{
+    let inputconfirmSenha = document.querySelector('#confirmSenha')
+    if(inputconfirmSenha.getAttribute('type') == 'password'){
+        inputconfirmSenha.setAttribute('type', 'text')
+    }else{
+        inputconfirmSenha.setAttribute('type', 'password')
     }
 
 })

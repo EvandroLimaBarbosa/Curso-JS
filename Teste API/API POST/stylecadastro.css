@@ -2,16 +2,17 @@
 
 :root{
     --cor0:#87878795;
-    --cor1: #0E0E33;
-    --cor2: #16164F;
-	--cor3: #9a00dc;
+    --cor1: #330e0e;
+    --cor2: #4f1616;
+	--cor3: #000000;
+	--cor4: #ffffff;
 }
 
 * {
 	margin: 0;
 	padding: 0;
-	color: white;
-	text-shadow: 1px 1px 3px black;
+	color: var(--cor4);
+	text-shadow: 1px 1px 3px var(--cor3);
 	font-family:  'Roboto Mono', monospace;
 }
 
@@ -82,7 +83,7 @@ h1 {
 .label-float input:valid + label {
 	font-size: 13px;
 	margin-top: -0px;
-	text-shadow: 2px 2px 2px black;
+	text-shadow: 2px 2px 2px var(--cor3);
 }
 
 
@@ -113,5 +114,5 @@ button:hover {
 	top: 15px;
 	right: 10px;
 	cursor: pointer;
-	color: #ffffff;
+	color: var(--cor4);
 }
