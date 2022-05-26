@@ -19,8 +19,8 @@
 - [CSS](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Calculadora/calculadora/calculadora//index.css)
 
 ## Aprendendo Api
-[Acessar](https://evandrolimabarbosa.github.io/Curso-JS/teste%20api/index.html)
+[Acessar](https://evandrolimabarbosa.github.io/Curso-JS/Teste%20API/API%20Fetch/index.html)
 
-- [Script](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/teste%20api/script.js)
+- [Script](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Teste%20API/API%20Fetch/script.js)
 
-- [HTML](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/teste%20api/index.html)
+- [HTML](https://github.com/EvandroLimaBarbosa/Curso-JS/blob/main/Teste%20API/API%20Fetch/index.html)
