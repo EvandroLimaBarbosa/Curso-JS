@@ -109,6 +109,29 @@ button:hover {
 	justify-content: center;
 }
 
+hr {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 90%;
+}
+
+p {
+	font-size: 14pt;
+	text-align: center;
+}
+
+a {
+	color: var(--cor1);
+	font-weight: bold;
+	text-decoration: none;
+	transition: all .3s ease-out;
+	text-shadow: 1px 1px 1px var(--cor3);
+}
+
+a:hover {
+	color: var(--cor2);
+}
+
 .fa-eye {
 	position: absolute;
 	top: 15px;
