@@ -36,7 +36,7 @@ body {
 	padding: 30px;
 	border-radius: 5%;
     width: 400px;
-	
+	box-shadow: 3px 3px 3px #00000087;	
 }
 
 h1 {

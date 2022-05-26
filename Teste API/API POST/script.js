@@ -1,7 +1,7 @@
-let btn = document.querySelector('.fa-eye');
+let btn = document.getElementById('verSenha');
 
 btn.addEventListener('click', ()=>{
-    let inputSenha = document.querySelector('#senha')
+    let inputSenha = document.getElementById('senha')
     if(inputSenha.getAttribute('type') == 'password'){
         inputSenha.setAttribute('type', 'text')
     }else{
