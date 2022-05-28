@@ -81,8 +81,8 @@ h1 {
 .label-float input:focus + label,
 .label-float input:valid + label {
 	font-size: 13px;
-	margin-top: -0px;
 	text-shadow: 2px 2px 2px var(--cor3);
+	font-weight: bolder;
 }
 
 button {
