@@ -39,8 +39,8 @@ nome.addEventListener('keyup', liberarnome);
 function liberarusuario() { liberar(usuario, labelUsuario, 'Usuario', 5) }
 usuario.addEventListener('keyup', liberarusuario);
 
-function liberarusuario() { liberar(senha, labelSenha, 'Senha', 6) }
-senha.addEventListener('keyup', liberarusuario);
+function liberarsenha() { liberar(senha, labelSenha, 'Senha', 6) }
+senha.addEventListener('keyup', liberarsenha);
 
 
 // função que verifica se a confirmação de senha está igual a senha e muda o estilo
