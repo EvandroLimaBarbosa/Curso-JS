@@ -1,10 +1,11 @@
 let btn = document.getElementById('verSenha');
 let btnconfirm = document.getElementById('verConfirmSenha');
+
 let nome = document.getElementById('nome');
 let labelNome = document.getElementById('labelNome');
 
 let usuario = document.getElementById('usuario');
-let labelUsuario = document.getElementById('labelusuario');
+let labelUsuario = document.getElementById('labelUsuario');
 
 let senha = document.getElementById('senha');
 let labelSenha = document.getElementById('labelSenha');
@@ -13,23 +14,30 @@ let confirmSenha = document.getElementById('confirmSenha');
 let labelConfirmSenha = document.getElementById('labelConfirmSenha');
 
 
-nome.addEventListener('keyup', ()=> {
-    if (nome.value.length == 0){
-        labelNome.removeAttribute('style');
-        labelNome.innerHTML = 'Nome';
-        nome.removeAttribute('style');
+function liberar(a, b, txt, minimo){
+    if (a.value.length == 0){
+        b.removeAttribute(none);
+        b.innerHTML = txt;
+        a.removeAttribute('style');
     }else{
-        if(nome.value.length <= 3){
-            labelNome.setAttribute('style', 'color: red');
-            labelNome.innerHTML = 'Nome *Insira no minimo 4 caracteres';
-            nome.setAttribute('style', 'border-color: red');
+        if(a.value.length <= minimo - 1){
+            b.setAttribute('style', 'color: red');
+            b.innerHTML = `${txt} *Insira no minimo ${minimo} caracteres`;
+            a.setAttribute('style', 'border-color: red');
         }else{
-            labelNome.setAttribute('style', 'color: green')
-            labelNome.innerHTML = 'Nome';
-            nome.setAttribute('style', 'border-color: green')
+            b.setAttribute('style', 'color: green')
+            b.innerHTML = txt;
+            a.setAttribute('style', 'border-color: green')
         }
     }
-})
+}
+
+function liberarnome() { liberar(nome, labelNome, 'Nome', 4) }
+nome.addEventListener('keyup', liberarnome);
+
+function liberarusuario() { liberar(usuario, labelUsuario, 'Usuario', 5) }
+usuario.addEventListener('keyup', liberarusuario);
+
 
 function cadastrar() {
     window.alert('botão clicado');
