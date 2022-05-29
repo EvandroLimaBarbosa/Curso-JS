@@ -76,13 +76,14 @@ h1 {
 	left: 0;
 	margin-top: 13px;
 	transition: all .3s ease-out;
+	font-weight: 800;
 }
 
 .label-float input:focus + label,
 .label-float input:valid + label {
-	font-size: 13px;
-	text-shadow: 2px 2px 2px var(--cor3);
-	font-weight: bolder;
+	font-size: 15px;
+	margin: 0;
+	text-shadow: 1px 1px 1px var(--cor3);
 }
 
 button {
@@ -130,7 +131,7 @@ a:hover {
 	color: var(--cor2);
 }
 
-.fa-eye {
+#verSenha {
 	position: absolute;
 	top: 15px;
 	right: 10px;

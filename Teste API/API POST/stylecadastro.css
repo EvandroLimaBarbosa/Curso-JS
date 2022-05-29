@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root{
-    --cor0:#87878795;
+    --cor0:#878787e6;
     --cor1: #330e0e;
-    --cor2: #4f1616;
+    --cor2: rgb(123, 56, 0);
 	--cor3: #000000;
 	--cor4: #ffffff;
 }
@@ -77,13 +77,14 @@ h1 {
 	left: 0;
 	margin-top: 13px;
 	transition: all .3s ease-out;
+	font-weight: 800;
 }
 
 .label-float input:focus + label,
 .label-float input:valid + label {
-	font-size: 13px;
-	margin-top: -0px;
-	text-shadow: 2px 2px 2px var(--cor3);
+	font-size: 15px;
+	margin: 0;
+	text-shadow: 1px 1px 1px var(--cor3);
 }
 
 
@@ -132,7 +133,7 @@ a:hover {
 	color: var(--cor2);
 }
 
-.fa-eye {
+#verConfirmSenha, #verSenha {
 	position: absolute;
 	top: 15px;
 	right: 10px;
