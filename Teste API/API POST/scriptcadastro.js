@@ -62,6 +62,11 @@ if (confirmSenha.value.length == 0){
     labelConfirmSenha.removeAttribute('style');
     labelConfirmSenha.innerHTML = 'Confirmar Senha';
     confirmSenha.removeAttribute('style');
+
+    validConfirmSenha = false
+
+    console.log(validConfirmSenha)
+
 }else{
     if(confirmSenha.value != senha.value){
         labelConfirmSenha.setAttribute('style', 'color: red');
