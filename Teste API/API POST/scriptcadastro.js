@@ -125,9 +125,17 @@ function cadastrar(){
 
 
     if(validNome && validUsuario && validSenha && validConfirmSenha){
-        let listaUser = JSON.parse(localStorage.getItem(listaUser) || '[]')
+        let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
 
+        listaUser.push(
+            {
+                nomeCad: nome.value,
+                userCad: usuario.value,
+                senhaCad: senha.value
+            }
+        )
 
+        localStorage.setItem('listaUser', JSON.stringify(listaUser));
 
 
         msgSuccess.setAttribute('style', 'display: block')
@@ -149,4 +157,6 @@ function cadastrar(){
         console.log(`Valor Usuario: ${validUsuario}`)
         console.log(`Valor Senha: ${validSenha}`)
         console.log(`Valor Confirm Senha: ${validConfirmSenha}`)
+
+        window.location.href('https://evandrolimabarbosa.github.io/Curso-JS/Teste%20API/API%20POST/index.html')
 }

@@ -17,7 +17,7 @@
 }
 
 body {
-	background-image: url(images);
+	background-image: url(images/starwars480px.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
