@@ -111,9 +111,7 @@ function cadastrar(){
         window.alert('ta tudo vazio');
     }
 
-        console.log(`Valor Nome ${validNome}`)
-        console.log(`Valor Nome ${validUsuario}`)
-        console.log(`Valor Nome ${validSenha}`)
-        console.log(`Valor Nome ${validConfirmSenha})
-
+        console.log(`Valor Nome: ${validNome}`)
+        console.log(`Valor Usuario: ${validUsuario}`)
+        console.log(`Valor Senha: ${validSenha}`)
 }
