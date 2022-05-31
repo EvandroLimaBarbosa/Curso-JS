@@ -125,6 +125,11 @@ function cadastrar(){
 
 
     if(validNome && validUsuario && validSenha && validConfirmSenha){
+        let listaUser = JSON.parse(localStorage.getItem(listaUser) || '[]')
+
+
+
+
         msgSuccess.setAttribute('style', 'display: block')
         msgSuccess.innerHTML = 'Cadastrando Usuario...'
 
