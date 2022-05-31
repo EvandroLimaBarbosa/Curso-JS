@@ -17,29 +17,41 @@ let confirmSenha = document.getElementById('confirmSenha');
 let labelConfirmSenha = document.getElementById('labelConfirmSenha');
 let validConfirmSenha = false
 
+let msgSuccess = document.getElementById('msgSuccess');
+let msgError = document.getElementById('msgError');
+
+
 // função de validação de texto, se não passar de um certo tamanho não é validado
 function liberar(a, b, txt, minimo, validar){
     if (a.value.length == 0){
         b.removeAttribute('style');
         b.innerHTML = txt;
         a.removeAttribute('style');
-        validar = false
+        return false
     }else{
         if(a.value.length <= minimo - 1){
             b.setAttribute('style', 'color: red');
             b.innerHTML = `${txt} *Insira no minimo ${minimo} caracteres`;
             a.setAttribute('style', 'border-color: red');
-            validar = false
-
-            
-        console.log(validar)
+            return false
         }else{
             b.setAttribute('style', 'color: green')
             b.innerHTML = txt;
             a.setAttribute('style', 'border-color: green')
-            validar = true
-            
-        console.log(validar)
+            return true
+        }
+    }
+}
+
+//função que verifica e retorna os valores booleanos
+function retornaValid(a, minimo){
+    if (a.value.length == 0){
+        return false
+    }else{
+        if(a.value.length <= minimo - 1){
+            return false
+        }else{
+            return true
         }
     }
 }
@@ -105,13 +117,31 @@ function mostrarConfirmSenhas() { funcMostrarSenhas(confirmSenha, btnconfirm) }
 btnconfirm.addEventListener('click', mostrarConfirmSenhas);
 
 function cadastrar(){
+    validNome = retornaValid(nome, 4);
+    validUsuario = retornaValid(usuario, 5);
+    validSenha = retornaValid(senha, 6);
+
+    console.log(senha.value)
+
+
     if(validNome && validUsuario && validSenha && validConfirmSenha){
-        window.alert('deu boa!!!')
+        msgSuccess.setAttribute('style', 'display: block')
+        msgSuccess.innerHTML = 'Cadastrando Usuario...'
+
+        msgError.setAttribute('style', 'display: none')
+        msgError.innerHTML = ''
     } else {
-        window.alert('ta tudo vazio');
+        msgError.setAttribute('style', 'display: block')
+        msgError.innerHTML = 'Preencha todos os campos corretamente!'
+
+        msgSuccess.setAttribute('style', 'display: none')
+        msgSuccess.innerHTML = ''
+
     }
+
 
         console.log(`Valor Nome: ${validNome}`)
         console.log(`Valor Usuario: ${validUsuario}`)
         console.log(`Valor Senha: ${validSenha}`)
+        console.log(`Valor Confirm Senha: ${validConfirmSenha}`)
 }
