@@ -20,7 +20,6 @@ let validConfirmSenha = false
 let msgSuccess = document.getElementById('msgSuccess');
 let msgError = document.getElementById('msgError');
 
-
 // função de validação de texto, se não passar de um certo tamanho não é validado
 function liberar(a, b, txt, minimo, validar){
     if (a.value.length == 0){
@@ -65,7 +64,6 @@ usuario.addEventListener('keyup', liberarusuario);
 
 function liberarsenha() { liberar(senha, labelSenha, 'Senha', 6, validSenha) }
 senha.addEventListener('keyup', liberarsenha);
-
 
 // função que verifica se a confirmação de senha está igual a senha e muda o estilo
 // (daria para fazer na função de cima porém seria mais trabalhoso)
@@ -137,26 +135,25 @@ function cadastrar(){
 
         localStorage.setItem('listaUser', JSON.stringify(listaUser));
 
-
         msgSuccess.setAttribute('style', 'display: block')
         msgSuccess.innerHTML = 'Cadastrando Usuario...'
 
         msgError.setAttribute('style', 'display: none')
         msgError.innerHTML = ''
+
+        setTimeout(()=>{
+            window.location.href = 'https://evandrolimabarbosa.github.io/Curso-JS/Teste%20API/API%20POST/index.html'
+        },3000)
+
     } else {
         msgError.setAttribute('style', 'display: block')
         msgError.innerHTML = 'Preencha todos os campos corretamente!'
 
         msgSuccess.setAttribute('style', 'display: none')
         msgSuccess.innerHTML = ''
-
     }
-
-
         console.log(`Valor Nome: ${validNome}`)
         console.log(`Valor Usuario: ${validUsuario}`)
         console.log(`Valor Senha: ${validSenha}`)
         console.log(`Valor Confirm Senha: ${validConfirmSenha}`)
-
-        window.location.href('https://evandrolimabarbosa.github.io/Curso-JS/Teste%20API/API%20POST/index.html')
 }
