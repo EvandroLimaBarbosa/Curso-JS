@@ -78,6 +78,8 @@ h1 {
 	margin-top: 13px;
 	transition: all .3s ease-out;
 	font-weight: 800;
+
+	text-shadow: 1.5px 1.5px 1px var(--cor3);
 }
 
 .label-float input:focus + label,
@@ -143,7 +145,7 @@ a:hover {
 
 #msgSuccess{
 	text-align: center;
-	background: rgb(81, 81, 81);
+	background: rgb(51, 51, 51);
 	color: rgb(33, 249, 0);
 	padding: 10px;
 	border-radius: 4px;
@@ -154,7 +156,7 @@ a:hover {
 
 #msgError{
 	text-align: center;
-	background: rgb(81, 81, 81);
+	background: rgb(51, 51, 51);
 	color: red;
 	padding: 10px;
 	border-radius: 4px;
