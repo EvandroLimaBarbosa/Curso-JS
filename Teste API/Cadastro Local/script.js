@@ -34,6 +34,7 @@ function entrar() {
 
     listaUser = JSON.parse(localStorage.getItem('listaUser'));
 
+    console.log(listaUser);
     listaUser.forEach((item) => {
         if (usuario.value == item.userCad && senha.value == item.senhaCad) {
             userValid = {
