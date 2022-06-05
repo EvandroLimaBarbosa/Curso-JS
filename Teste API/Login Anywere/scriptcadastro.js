@@ -121,22 +121,27 @@ function cadastrar() {
     validUsuario = retornaValid(usuario, 5);
     validSenha = retornaValid(senha, 6);
 
-    console.log(senha.value)
+    // console.log(senha.value)
 
 
     if (validNome && validUsuario && validSenha && validConfirmSenha) {
         let listaUser = 'https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/cadastros'
 
 
-        axios.post(listaUser, {
-            user: usuario.value,
-            nome: nome.value,
-            senha: senha.value
-
-
+        fetch(listaUser, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+            userCad: usuario.value,
+            nomeCad: nome.value,
+            senhaCad: senha.value
         })
+
+    })
             .then(function (response) {
-                console.log(response);
+                console.log(response.data);
 
                 msgSuccess.setAttribute('style', 'display: block')
                 msgSuccess.innerHTML = 'Cadastrando Usuario...'
@@ -146,7 +151,7 @@ function cadastrar() {
 
                 setTimeout(() => {
                     window.location.href = 'index.html'
-                }, 3000)
+                }, 1500)
 
             })
             .catch(function (error) {
@@ -161,13 +166,13 @@ function cadastrar() {
         msgSuccess.setAttribute('style', 'display: none')
         msgSuccess.innerHTML = ''
     }
-    console.log(`Valor Nome: ${validNome}`)
-    console.log(`Valor Usuario: ${validUsuario}`)
-    console.log(`Valor Senha: ${validSenha}`)
-    console.log(`Valor Confirm Senha: ${validConfirmSenha}`)
+    // console.log(`Valor Nome: ${validNome}`)
+    // console.log(`Valor Usuario: ${validUsuario}`)
+    // console.log(`Valor Senha: ${validSenha}`)
+    // console.log(`Valor Confirm Senha: ${validConfirmSenha}`)
 
-    console.log(`Valor Nome: ${nome.value}`)
-    console.log(`Valor Usuario: ${usuario.value}`)
-    console.log(`Valor Senha: ${senha.value}`)
-    console.log(`Valor Confirm Senha: ${confirmSenha.value}`)
+    // console.log(`Valor Nome: ${nome.value}`)
+    // console.log(`Valor Usuario: ${usuario.value}`)
+    // console.log(`Valor Senha: ${senha.value}`)
+    // console.log(`Valor Confirm Senha: ${confirmSenha.value}`)
 }

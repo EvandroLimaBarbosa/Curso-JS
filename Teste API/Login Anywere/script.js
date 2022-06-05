@@ -14,6 +14,15 @@ btn.addEventListener('click', () => {
 })
 
 
+function estiloVermelho() {
+    userLabel.setAttribute('style', 'color: red');
+    usuario.setAttribute('style', 'border-color: red');
+    senhaLabel.setAttribute('style', 'color: red');
+    senha.setAttribute('style', 'border-color: red');
+
+    msgError.setAttribute('style', 'display: block')
+    usuario.focus()
+}
 
 
 
@@ -27,8 +36,6 @@ function entrar() {
 
     let msgError = document.getElementById('msgError');
 
-    let listaUser = []
-
     let userValid = {
         nome: '',
         user: '',
@@ -37,69 +44,71 @@ function entrar() {
 
 
 
-    axios.get('https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/cadastros')
-        .then(function (response) {
+ const url = 'https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/cadastros'
+
+
+        fetch(url)
+        .then((resp) => resp.json())
+        .then(function (data) {
             // manipula o sucesso da requisição
-            console.log(response);
-            listaUser = response.data
-            console.log(listaUser);
-
-            listaUser.forEach((item) => {
-                if (usuario.value == item.userCad && senha.value == item.senhaCad) {
-                    userValid = {
-                        nome: item.nomeCad,
-                        user: item.userCad,
-                        senha: item.senhaCad
-                    }
-                }
-            })
 
 
+            var contador = 0
+
+             for (let index = 0; index < data.length; index++) {
+             if (usuario.value == data[index].userCad && senha.value == data[index].senhaCad) {
+                 userValid = {
+                     nome: data[index].nomeCad,
+                     user: data[index].userCad,
+                     senha: data[index].senhaCad
+                 }
+                 contador = index
+                 break
+             }
+            }
+
+
+            console.log(data)
+
+
+
+            if (usuario.value == "" && senha.value == "") {
+                estiloVermelho()
+                msgError.innerHTML = 'Usuario ou senha vazios'
+        
+                
+            } else if (usuario.value == data[contador].userCad && senha.value == data[contador].senhaCad) {
+                userLabel.setAttribute('style', 'color: green');
+                usuario.setAttribute('style', 'border-color: green');
+                senhaLabel.setAttribute('style', 'color: green');
+                senha.setAttribute('style', 'border-color: green');
+                msgError.setAttribute('style', 'display: none')
+        
+                window.location.href = './pagina/homescreen.html'
+        
+                let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
+        
+                localStorage.setItem('token', token)
+        
+                localStorage.setItem('userLogado', JSON.stringify(userValid))
+        
+            } else {
+                estiloVermelho()
+                msgError.innerHTML = 'Usuario ou senha incorretos'   
+            }
+
+            
 
         })
         .catch(function (error) {
-            // manipula erros da requisição
+            estiloVermelho()
+            msgError.innerHTML = 'Algo de errado com o codigo'
             console.error(error);
         });
 
 
 
 
-
-    function estiloVermelho() {
-        userLabel.setAttribute('style', 'color: red');
-        usuario.setAttribute('style', 'border-color: red');
-        senhaLabel.setAttribute('style', 'color: red');
-        senha.setAttribute('style', 'border-color: red');
-
-        msgError.setAttribute('style', 'display: block')
-    }
-    if (usuario.value == "" && senha.value == "") {
-        estiloVermelho()
-        msgError.innerHTML = 'Usuario ou senha vazios'
-
-        usuario.focus()
-    } else if (usuario.value == userValid.user && senha.value == userValid.senha) {
-        userLabel.setAttribute('style', 'color: green');
-        usuario.setAttribute('style', 'border-color: green');
-        senhaLabel.setAttribute('style', 'color: green');
-        senha.setAttribute('style', 'border-color: green');
-        msgError.setAttribute('style', 'display: none')
-
-        window.location.href = './pagina/homescreen.html'
-
-        let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
-
-        localStorage.setItem('token', token)
-
-        localStorage.setItem('userLogado', JSON.stringify(userValid))
-
-    } else {
-        estiloVermelho()
-        msgError.innerHTML = 'Usuario ou senha incorretos'
-
-        usuario.focus()
-    }
 
 
 
