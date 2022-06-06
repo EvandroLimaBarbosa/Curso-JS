@@ -4,6 +4,8 @@ let btn = document.getElementById('verSenha');
 document.addEventListener("keypress", function(e) {
   if(e.key === 'Enter') {
     
+    let enter = document.getElementById('entrar');
+    
     btn.click();
   
   }
