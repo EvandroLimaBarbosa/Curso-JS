@@ -20,6 +20,17 @@ let validConfirmSenha = false
 let msgSuccess = document.getElementById('msgSuccess');
 let msgError = document.getElementById('msgError');
 
+
+document.addEventListener("keypress", function(e) {
+  if(e.key === 'Enter') {
+    
+    let enter = document.getElementById('entrar');
+    
+    enter.click();
+  
+  }
+});
+
 // função de validação de texto, se não passar de um certo tamanho não é validado
 function liberar(a, b, txt, minimo, validar) {
     if (a.value.length == 0) {
