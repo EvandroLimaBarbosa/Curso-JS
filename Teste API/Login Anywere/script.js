@@ -6,7 +6,7 @@ document.addEventListener("keypress", function(e) {
     
     let enter = document.getElementById('entrar');
     
-    btn.click();
+    enter.click();
   
   }
 });
