@@ -1,8 +1,11 @@
 function iniciar(){
 let userLogado = JSON.parse(localStorage.getItem('userLogado'));
 let logado = document.querySelector('#logado');
+let txtnome = userLogado.nome.split(" ", 1)[0]
 
-logado.innerHTML = `Usuario: ${userLogado.user[0].toUpperCase() + userLogado.user.substring(1)}`;
+
+console.log(txtnome)
+logado.innerHTML = `Nome usuario: ${txtnome.toUpperCase().substring(0,1) + txtnome.substring(1).toLowerCase()}`;
 }
 
 if (localStorage.getItem('token') == null) {
@@ -11,8 +14,9 @@ if (localStorage.getItem('token') == null) {
 }
 
 function sair() {
-    localStorage.removeItem('token')
-    window.location.href = '../index.html'
+    localStorage.removeItem('userLogado');
+    localStorage.removeItem('token');
+    window.location.href = '../index.html';
 
 
 
