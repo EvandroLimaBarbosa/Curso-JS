@@ -21,14 +21,14 @@ let msgSuccess = document.getElementById('msgSuccess');
 let msgError = document.getElementById('msgError');
 
 
-document.addEventListener("keypress", function(e) {
-  if(e.key === 'Enter') {
-    
-    let enter = document.getElementById('entrar');
-    
-    enter.click();
-  
-  }
+document.addEventListener("keypress", function (e) {
+    if (e.key === 'Enter') {
+
+        let enter = document.getElementById('entrar');
+
+        enter.click();
+
+    }
 });
 
 // função de validação de texto, se não passar de um certo tamanho não é validado
@@ -146,6 +146,9 @@ function cadastrar() {
                         msgError.innerHTML = 'Usuario Já Cadastrado!'
                         labelUsuario.setAttribute('style', 'color: red');
                         usuario.setAttribute('style', 'border-color: red');
+
+
+                        usuario.focus()
 
                         msgSuccess.setAttribute('style', 'display: none')
                         msgSuccess.innerHTML = ''
