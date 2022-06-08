@@ -1,11 +1,11 @@
 function iniciar(){
 let userLogado = JSON.parse(localStorage.getItem('userLogado'));
 let logado = document.querySelector('#logado');
-let txtnome = userLogado.nome.split(" ", 1)[0]
+let txtnome = userLogado.split(" ", 1)[0]
 
 
 console.log(txtnome)
-logado.innerHTML = `Nome usuario: ${txtnome.toUpperCase().substring(0,1) + txtnome.substring(1).toLowerCase()}`;
+logado.innerHTML = `Nome do usuario: ${txtnome.toUpperCase().substring(0,1) + txtnome.substring(1).toLowerCase()}`;
 }
 
 if (localStorage.getItem('token') == null) {

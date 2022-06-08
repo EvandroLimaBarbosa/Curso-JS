@@ -103,7 +103,7 @@ function entrar() {
         
                 localStorage.setItem('token', token)
         
-                localStorage.setItem('userLogado', JSON.stringify(userValid))
+                localStorage.setItem('userLogado', JSON.stringify(userValid.nome))
         
             } else {
                 estiloVermelho()
