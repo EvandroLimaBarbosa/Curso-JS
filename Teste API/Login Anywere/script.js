@@ -1,5 +1,18 @@
 let btn = document.getElementById('verSenha');
 
+
+document.addEventListener("keypress", function(e) {
+  if(e.key === 'Enter') {
+    
+    let enter = document.getElementById('entrar');
+    
+    enter.click();
+  
+  }
+});
+
+
+
 btn.addEventListener('click', () => {
     let inputSenha = document.getElementById('senha')
     if (inputSenha.getAttribute('type') == 'password') {
@@ -105,12 +118,5 @@ function entrar() {
             msgError.innerHTML = 'Algo de errado com o codigo'
             console.error(error);
         });
-
-
-
-
-
-
-
 
 }
