@@ -32,7 +32,7 @@ document.addEventListener("keypress", function(e) {
 });
 
 // função de validação de texto, se não passar de um certo tamanho não é validado
-function liberar(a, b, txt, minimo, validar) {
+function liberar(a, b, txt, minimo) {
     if (a.value.length == 0) {
         b.removeAttribute('style');
         b.innerHTML = txt;
@@ -51,8 +51,6 @@ function liberar(a, b, txt, minimo, validar) {
             return true
         }
     }
-    
-    console.log(validar.value)
 }
 
 //função que verifica e retorna os valores booleanos
@@ -88,8 +86,6 @@ confirmSenha.addEventListener('keyup', () => {
 
         validConfirmSenha = false
 
-        console.log(validConfirmSenha)
-
     } else {
         if (confirmSenha.value != senha.value) {
             labelConfirmSenha.setAttribute('style', 'color: red');
@@ -97,14 +93,12 @@ confirmSenha.addEventListener('keyup', () => {
             confirmSenha.setAttribute('style', 'border-color: red');
             validConfirmSenha = false
 
-            console.log(validConfirmSenha)
         } else {
             labelConfirmSenha.setAttribute('style', 'color: green')
             labelConfirmSenha.innerHTML = 'Confirmar Senha';
             confirmSenha.setAttribute('style', 'border-color: green')
             validConfirmSenha = true
 
-            console.log(validConfirmSenha)
         }
     }
 })
@@ -132,39 +126,69 @@ function cadastrar() {
     validUsuario = retornaValid(usuario, 5);
     validSenha = retornaValid(senha, 6);
 
-    // console.log(senha.value)
-
-
     if (validNome && validUsuario && validSenha && validConfirmSenha) {
         let listaUser = 'https://6282db2492a6a5e4621a86f3.mockapi.io/api/start/cadastros'
 
 
-        fetch(listaUser, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-            userCad: usuario.value,
-            nomeCad: nome.value,
-            senhaCad: senha.value
-        })
+        var contador = 0
+        var validar = true
 
-    })
-            .then(function (response) {
-                console.log(response.data);
 
-                msgSuccess.setAttribute('style', 'display: block')
-                msgSuccess.innerHTML = 'Cadastrando Usuario...'
+        fetch(listaUser)
+            .then((resp) => resp.json())
+            .then(function (data) {
+                for (let index = 0; index < data.length; index++) {
+                    if (usuario.value == data[index].userCad) {
 
-                msgError.setAttribute('style', 'display: none')
-                msgError.innerHTML = ''
 
-                setTimeout(() => {
-                    window.location.href = 'index.html'
-                }, 1500)
+                        msgError.setAttribute('style', 'display: block')
+                        msgError.setAttribute('style', 'display: block')
+                        msgError.innerHTML = 'Usuario Já Cadastrado!'
+                        labelUsuario.setAttribute('style', 'color: red');
+                        usuario.setAttribute('style', 'border-color: red');
 
+                        msgSuccess.setAttribute('style', 'display: none')
+                        msgSuccess.innerHTML = ''
+
+                        console.log('USUARIO JÁ EXISTE')
+
+                        contador = index
+                        validar = false
+                        break
+
+
+                    }
+                }
+
+                if (validar) {
+                    fetch(listaUser, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            userCad: usuario.value,
+                            nomeCad: nome.value,
+                            senhaCad: senha.value
+                        })
+
+                    })
+
+
+                    msgSuccess.setAttribute('style', 'display: block')
+                    msgSuccess.innerHTML = 'Cadastrando Usuario...'
+
+
+                    msgError.setAttribute('style', 'display: none')
+                    msgError.innerHTML = ''
+
+                    setTimeout(() => {
+                        window.location.href = 'index.html'
+                    }, 1500)
+
+                }
             })
+
             .catch(function (error) {
                 window.alert('DEU RUIM!!')
                 console.error(error);
@@ -177,13 +201,5 @@ function cadastrar() {
         msgSuccess.setAttribute('style', 'display: none')
         msgSuccess.innerHTML = ''
     }
-    // console.log(`Valor Nome: ${validNome}`)
-    // console.log(`Valor Usuario: ${validUsuario}`)
-    // console.log(`Valor Senha: ${validSenha}`)
-    // console.log(`Valor Confirm Senha: ${validConfirmSenha}`)
 
-    // console.log(`Valor Nome: ${nome.value}`)
-    // console.log(`Valor Usuario: ${usuario.value}`)
-    // console.log(`Valor Senha: ${senha.value}`)
-    // console.log(`Valor Confirm Senha: ${confirmSenha.value}`)
 }
