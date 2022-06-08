@@ -62,13 +62,13 @@ function entrar() {
                      user: data[index].userCad,
                      senha: data[index].senhaCad
                  }
-                 contador = index
-                 break
+                 contador = index;
+                 break;
              }
             }
 
 
-            console.log(data)
+            console.log(data[contador])
 
 
 
