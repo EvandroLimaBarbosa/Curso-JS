@@ -69,3 +69,4 @@ const cloneCarro = {...carro}
 console.log(carro)
 
 console.log(cloneCarro)
+
