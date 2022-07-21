@@ -1,0 +1,25 @@
+body { 
+    background: rgb(118, 138, 142);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+    text-shadow:  5px 5px 10px  black;
+
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 30em;
+    margin: auto;
+    text-align: left;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.473);
+}
+
+input {
+    margin:.5em;
+}
