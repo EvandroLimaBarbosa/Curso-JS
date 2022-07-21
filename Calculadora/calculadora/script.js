@@ -4,6 +4,8 @@ var trava = 0
 var reset = 0
 
 function insert(num) {
+    console.log('valor do reset:' + reset)
+    console.log('valor da trava:' + trava)
     if(reset == 1) {
         resultado.innerText = num;
         calculo.innerText = ' '
@@ -26,6 +28,8 @@ function insert(num) {
 }
 
 function insertsimbolo(num) {
+    console.log('valor do calculo:' + calculo.innerText)
+    console.log('valor do resultado:' + resultado.innerText)
     if(reset == 1) {
         calculo.innerText = `${resultado.innerText} ${num}`;
         reset = 0;
