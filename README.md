@@ -1,7 +1,7 @@
 # Portifólio Curso-de-Java-Script
 ---
 ## Tela de Login
-![Auto Print](https://user-images.githubusercontent.com/96010876/188042136-97ba0b6d-b9a8-4949-bd60-ed94e1313ece.png)
+![Auto Print](https://user-images.githubusercontent.com/96010876/188042256-65c7b800-c993-4340-82ca-4cc0d1eda91b.png)
 
 [Acessar](https://evandrolimabarbosa.github.io/Curso-JS/Teste%20API/Login%20Anywere/index.html)
 
